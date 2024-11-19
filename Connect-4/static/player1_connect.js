@@ -8,7 +8,7 @@ function autoUpdate() {
 
 function getNewBoard(){
     const Http =  new XMLHttpRequest();
-    var url = "http:/0.0.0.0:5000/autoUpdate"
+    var url = "https://connect4new.onrender.com/autoUpdate"
     Http.open("GET",url)
     Http.send()
     Http.onload = function(){
@@ -50,7 +50,7 @@ function printVals(){
 
 function pickRed(){
     const Http =  new XMLHttpRequest();
-    const url = 'http://0.0.0.0:5000/p1Color?color=red'
+    const url = 'https://connect4new.onrender.com/p1Color?color=red'
     window.location.href = url
 
     btns = document.getElementsByClassName("options")
@@ -63,7 +63,7 @@ function pickRed(){
 
 function pickYellow(){
     const Http =  new XMLHttpRequest();
-    const url = 'http://0.0.0.0:5000/p1Color?color=yellow'
+    const url = 'https://connect4new.onrender.com/p1Color?color=yellow'
     window.location.href = url
     btns = document.getElementsByClassName("options")
     btns[0].style.display = 'none'
@@ -86,7 +86,7 @@ function displayBoard(board){
 
 function move(event){
     const Http =  new XMLHttpRequest();
-    var url = "http://0.0.0.0:5000/move1"
+    var url = "https://connect4new.onrender.com/move1"
     
     Http.open('POST', url)
     Http.setRequestHeader("Content-Type", "application/json");
