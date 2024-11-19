@@ -4,7 +4,7 @@ function autoUpdate() {
 
 function getNewBoard(){
     const Http =  new XMLHttpRequest();
-    var url = "http://127.0.0.1:5000/autoUpdate"
+    var url = "http://0.0.0.0:5000/autoUpdate"
     Http.open("GET",url)
     Http.send()
     Http.onload = function(){
@@ -39,7 +39,7 @@ function displayBoard(board){
 
 function move(event){
     const Http =  new XMLHttpRequest();
-    const url = 'http://127.0.0.1:5000/move2'
+    const url = 'http://0.0.0.0:5000/move2'
     Http.open('POST', url)
     Http.setRequestHeader("Content-Type", "application/json");
     let classNames = event.target.getAttribute('class')
